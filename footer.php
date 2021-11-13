@@ -28,8 +28,16 @@
 			</nav>
 		<?php } ?>
 		<div class="mh-copyright-wrap">
+						<span class="mh-copyright">
+				<?php printf(__('Housepets comic by %1$s', ''), '<a href="' . esc_url('https://www.housepetscomic.com/') . '" rel="nofollow">Rick Griffin</a>'); ?>
+				</span> | 
 			<span class="mh-copyright">
-				<?php printf(__('Proudly powered by Tuto WordPress theme from %1$s', 'tuto'), '<a href="' . esc_url('https://www.mhthemes.com/') . '" rel="nofollow">MH Themes</a>'); ?>
+				<?php printf(__('Web redesign & Translate by %1$s', 'BezaTheCat'), '<a href="' . esc_url('https://www.bezathecat.com/') . '" rel="nofollow">BezaTheCat /ᐠ｡  ᳕｡ᐟ\/ </a>'); ?>
+				</span>
+		</div>
+		<div class="mh-copyright-wrap">
+				<span class="mh-copyright">
+				<?php printf(__('Powered by Tuto WordPress theme from %1$s', 'tuto'), '<a href="' . esc_url('https://www.mhthemes.com/') . '" rel="nofollow">MH Themes</a>'); ?>
 			</span>
 		</div>
 	</div>

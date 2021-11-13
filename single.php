@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php do_action('comic-area'); ?>
 <div class="mh-wrapper clearfix">
 	<div id="main-content" class="mh-content"><?php
 		while (have_posts()) : the_post();

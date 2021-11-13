@@ -78,11 +78,11 @@ if (!function_exists('tuto_default_options')) {
 	function tuto_default_options() {
 		$default_options = array(
 			'excerpt_length' => 25,
-			'excerpt_more' => esc_html__('Read More', 'tuto'),
+			'excerpt_more' => esc_html__('อ่านเพิ่มเติม', 'tuto'),
 			'magazine_layout' => 'enable',
 			'sb_position' => 'right',
 			'author_box' => 'enable',
-			'post_nav' => 'enable',
+			'post_nav' => 'disable',
 			'full_bg' => ''
 		);
 		return $default_options;

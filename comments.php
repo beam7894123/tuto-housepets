@@ -45,8 +45,8 @@ if (have_comments()) {
 if (comments_open()) {
 	echo '<div id="mh-comments"></div>' . "\n";
 	comment_form(array(
-		'title_reply' => esc_html__('Leave a Reply', 'tuto'),
-        'comment_notes_before' => '<p class="comment-notes">' . esc_html__('Your email address will not be published.', 'tuto') . '</p>',
+		'title_reply' => esc_html__('ความคิดเห็น (Comment)', 'tuto'),
+        'comment_notes_before' => '<p class="comment-notes">' . esc_html__('Email ของคุณจะไม่ถูกเปิดเผย (Your email address will not be published.)', 'tuto') . '</p>',
         'comment_notes_after'  => '',
         'comment_field' => '<p class="comment-form-comment"><label for="comment">' . esc_html__('Comment', 'tuto') . '</label><br/><textarea id="comment" name="comment" cols="45" rows="5" aria-required="true"></textarea></p>'
 	));

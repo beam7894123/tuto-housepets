@@ -95,9 +95,11 @@ if (!function_exists('tuto_post_meta')) {
 		echo '<p class="mh-meta entry-meta">' . "\n";
 			echo '<span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="' . esc_url(get_month_link(get_the_time('Y'), get_the_time('m'))) . '">' . get_the_date() . '</a></span>' . "\n";
 			echo '<span class="entry-meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>' . "\n";
+/***** Disable unnecessary mata 
 			echo '<span class="entry-meta-categories"><i class="fa fa-folder-open-o"></i>' . get_the_category_list(', ', '') . '</span>' . "\n";
 			echo '<span class="entry-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-scroll" href="' . esc_url(get_permalink() . '#mh-comments') . '">' . get_comments_number() . '</a></span>' . "\n";
 		echo '</p>' . "\n";
+*****/
 	}
 }
 add_action('tuto_post_header', 'tuto_post_meta');
@@ -110,9 +112,11 @@ if (!function_exists('tuto_loop_meta')) {
 		if (in_the_loop()) {
 			echo '<span class="mh-meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>' . "\n";
 		}
+		/***** Disable unnecessary mata
 		echo '<span class="mh-meta-comments"><i class="fa fa-comment-o"></i>';
 			tuto_comment_count();
 		echo '</span>' . "\n";
+		*****/
 	}
 }
 
@@ -295,10 +299,10 @@ if (!function_exists('tuto_comment_fields')) {
 		$aria_req = ($req ? " aria-required='true'" : '');
 		$consent = empty($commenter['comment_author_email']) ? '' : ' checked="checked"';
 		$fields =  array(
-			'author'	=>	'<p class="comment-form-author"><label for="author">' . esc_html__('Name ', 'tuto') . '</label>' . ($req ? '<span class="required">*</span>' : '') . '<br/><input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></p>',
+			'author'	=>	'<p class="comment-form-author"><label for="author">' . esc_html__('ชื่อ (Name)', 'tuto') . '</label>' . ($req ? '<span class="required">*</span>' : '') . '<br/><input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' /></p>',
 			'email' 	=>	'<p class="comment-form-email"><label for="email">' . esc_html__('Email ', 'tuto') . '</label>' . ($req ? '<span class="required">*</span>' : '' ) . '<br/><input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></p>',
-			'url' 		=>	'<p class="comment-form-url"><label for="url">' . esc_html__('Website', 'tuto') . '</label><br/><input id="url" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></p>',
-			'cookies' 	=>  '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' . '<label for="wp-comment-cookies-consent">' . esc_html__('Save my name, email, and website in this browser for the next time I comment.', 'tuto') . '</label></p>'
+			'url' 		=>	'<p class="comment-form-url"><label for="url">' . esc_html__('เว็บไซต์ (Website)', 'tuto') . '</label><br/><input id="url" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" /></p>',
+			'cookies' 	=>  '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' . '<label for="wp-comment-cookies-consent">' . esc_html__('บันทึก ชื่อ, Email, เว็บไซต์ ไว้สำหรับ Comment รอบต่อไป (Save my name, email, and website in this browser for the next time I comment.)', 'tuto') . '</label></p>'
 		);
 		return $fields;
 	}

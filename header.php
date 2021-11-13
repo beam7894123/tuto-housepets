@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!-- 
+			　／l、
+			（ﾟ､ ｡ ７ maow...
+			　l、ﾞ ~ヽ
+			　じしf_, )ノ
+... I down't think u supposed tuwu swe thiw
+-->
 <html class="no-js<?php tuto_html_class(); ?>" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo('charset'); ?>">
