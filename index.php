@@ -1,5 +1,6 @@
 <?php $tuto_options = tuto_theme_options(); ?>
 <?php get_header(); ?>
+<?php do_action('comic-area'); ?>
 <div class="mh-wrapper clearfix">
 	<div id="main-content" class="mh-content"><?php
 		tuto_before_page_content();
